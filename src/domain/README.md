@@ -1,6 +1,6 @@
 # About this folder
 
-// **Domain** is a target subject of a program. (See "domain driven design" – how to structure applications)
+**Domain** is a target subject of a program. (See "domain driven design" – how to structure applications)
 
 In our case, domain refers to sound, note generation, note notation, and real keyboard layout.
 
