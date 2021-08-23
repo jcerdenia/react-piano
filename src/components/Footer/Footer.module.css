@@ -1,0 +1,16 @@
+/* 
+This is a CSS module. It gives us all the perks of CSS but also isolation
+and close location to the component that uses it. It also generates unique
+class names for components, making it impossible for class names from 2
+different components to collide.
+*/
+
+.footer {
+  /* Height should be the value of a custom property (CSS variable), i.e., 
+  var() searches for a custom property with a given name and uses its value.
+  The value is declared in index.css */
+  height: var(--footer-height);
+  padding: 5px;
+  text-align: center;
+  line-height: 1.4;
+}

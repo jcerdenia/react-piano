@@ -1,0 +1,15 @@
+/* Page should have a height of at least 100% of screen height. */
+.app {
+  min-height: 100vh;
+}
+
+/* Place Footer at the bottom, and Logo at the top of page.
+All contents should be centered; App should have minimal height of the page
+without the Footer and Logo components' heights. */
+.content {
+  --offset: calc(var(--foter-height) + var(--logo-height));
+  min-height: calc(100vh - var(--offset));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
