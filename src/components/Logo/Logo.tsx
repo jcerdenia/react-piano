@@ -1,6 +1,6 @@
 import styles from "./Logo.module.css"
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <h1 className={styles.logo}>
       <span role="img" aria-label="metal hand emoji">
@@ -17,5 +17,3 @@ const Logo = () => {
 }
 
 // NB role="img" attribute helps screen readers to correctly parse the content.
-
-export default Logo;
