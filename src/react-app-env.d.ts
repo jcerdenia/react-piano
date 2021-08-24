@@ -10,3 +10,6 @@ interface Window extends Window {
   // in some browsers AudioContext is accessible via AudioContext, and some via webkitAudioContext.
   webkitAudioContext: AudioContextType
 }
+
+type SoundfontType = typeof Soundfont
+// This will be useful when we create an adapter for Soundfont.
