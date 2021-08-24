@@ -25,3 +25,21 @@ It will help us calculate elements' geometry more easily. */
 *::before {
   box-sizing: border-box;
 }
+
+/* Reset default button style to ensure our keys render
+more or less equally. */
+button {
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background: none;
+  appearance: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  cursor: pointer;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}
