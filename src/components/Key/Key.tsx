@@ -15,7 +15,7 @@ type KeyProps = {
 
 export const Key: FunctionComponent<KeyProps> = (props) => {
   // FunctionComponent is a generic type from the React package
-  //  which takes props type as an argument.
+  // which takes props type as an argument.
   const { type, label, onUp, onDown, ...rest } = props
   return (
     <button
@@ -24,6 +24,8 @@ export const Key: FunctionComponent<KeyProps> = (props) => {
       onMouseUp={onUp}
       type="button"
       {...rest}
-    />
+    >
+      {label}
+    </button>
   )
 }

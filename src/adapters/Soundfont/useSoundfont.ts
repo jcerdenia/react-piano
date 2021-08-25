@@ -27,6 +27,14 @@ export const useSoundfont = ({ AudioContext }: Settings): Adapted => {
   const [loading, setLoading] = useState<boolean>(false)
   const [player, setPlayer] = useState<Optional<Player>>(null)
   const audio = useRef(new AudioContext()) // to access this instance, we use audio.current property
+
+  const resume = async () => {
+    return audio.current.state === "suspended"
+      ? await audio.current.resume()
+      : Promise.resolve()
+    // "Suspended" means AudioContext is halting audio hardware access and 
+    // reducing CPU/battery usage. To continue we have to resume() it.
+  }
   
   const load = async (instrument: InstrumentName = DEFAULT_INSTRUMENT) => {
     setLoading(true)
@@ -48,14 +56,6 @@ export const useSoundfont = ({ AudioContext }: Settings): Adapted => {
     if (!activeNodes[note]) return
     activeNodes[note]!.stop() // ! is non-null assertion
     activeNodes = { ...activeNodes, [note]: null }
-  }
-
-  const resume = async () => {
-    return audio.current.state === "suspended"
-      ? await audio.current.resume()
-      : Promise.resolve()
-    // "Suspended" means AudioContext is halting audio hardware access and 
-    // reducing CPU/battery usage. To continue we have to resume() it.
   }
 
   return { loading, current, load, play, stop }

@@ -11,7 +11,6 @@ export type KeyboardProps = {
 }
 
 export const Keyboard: FunctionComponent<KeyboardProps> = ({ loading, stop, play }) => {
-  console.log("FUCK", notes)
   return (
     <div className={styles.keyboard}>
       {notes.map(({ midi, type, index, octave }) => {

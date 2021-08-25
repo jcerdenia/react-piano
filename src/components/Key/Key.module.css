@@ -6,6 +6,19 @@
   user-select: none;
 }
 
+/* This block provisionally copied from completed sample project with white-key-width changed
+or else the keys don't show up properly. The CSS in this book is a disaster! */
+.key {
+  --radius: 2px;
+  --font-size: 0.6rem;
+  --white-key-width: 60px;
+  --white-key-height: calc(var(--white-key-width) * 4.57);
+  --white-key-padding: calc(var(--white-key-height) / 1.28);
+  --black-key-width: calc(var(--white-key-width) / 1.6);
+  --black-key-height: calc(var(--white-key-height) / 1.77);
+  --black-key-padding: calc(var(--black-key-height) / 1.5);
+}
+
 .natural {
   width: var(--white-key-width);
   height: var(--white-key-height);

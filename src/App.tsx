@@ -9,7 +9,7 @@ function App() {
     <div className={styles.app}>
       <Logo />
       <main className={styles.content}>
-        {/* <Main /> */}
+        <Main />
       </main>
       <Footer />
     </div>
