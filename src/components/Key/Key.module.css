@@ -6,12 +6,13 @@
   user-select: none;
 }
 
-/* This block provisionally copied from completed sample project with white-key-width changed
-or else the keys don't show up properly. The CSS in this book is a disaster! */
+/* This block provisionally copied from completed sample project with white-key-width 
+and font size adjusted or else the keys don't show up properly. 
+The CSS in this book is a disaster! */
 .key {
   --radius: 2px;
-  --font-size: 0.6rem;
-  --white-key-width: 60px;
+  --font-size: 1rem;
+  --white-key-width: 75px;
   --white-key-height: calc(var(--white-key-width) * 4.57);
   --white-key-padding: calc(var(--white-key-height) / 1.28);
   --black-key-width: calc(var(--white-key-width) / 1.6);
@@ -48,7 +49,7 @@ or else the keys don't show up properly. The CSS in this book is a disaster! */
 .sharp:active,
 .sharp.is-active,
 .flat:active,
-.flat:is-active {
+.flat.is-active {
   background-color: #555;
 }
 
