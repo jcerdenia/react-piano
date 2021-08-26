@@ -4,12 +4,9 @@
   border-radius: 0 0 var(--radius) var(--radius);
   text-transform: uppercase;
   user-select: none;
-}
-
-/* This block provisionally copied from completed sample project with white-key-width 
-and font size adjusted or else the keys don't show up properly. 
-The CSS in this book is a disaster! */
-.key {
+  /* The following provisionally copied from completed sample project
+  with some values adjusted or else the keys don't show up properly. 
+  The CSS in this book is a travesty. */
   --radius: 2px;
   --font-size: 1rem;
   --white-key-width: 75px;
@@ -42,14 +39,14 @@ The CSS in this book is a disaster! */
 }
 
 .natural:active,
-.natural.is-active {
+.natural.is-pressed {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
 .sharp:active,
-.sharp.is-active,
+.sharp.is-pressed,
 .flat:active,
-.flat.is-active {
+.flat.is-pressed {
   background-color: #555;
 }
 
